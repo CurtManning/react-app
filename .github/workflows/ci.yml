@@ -39,7 +39,6 @@ jobs:
         with:
           name: build
           path: build
-      - uses: actions/download-artifact
       - name: Deploy to Develop
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain toothsome-comfort.surge.sh
