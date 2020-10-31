@@ -40,7 +40,7 @@ jobs:
         with:
           name: build
           path: build
-      - name: Deploy to Develop
+      - name: Deploy to Devel
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain toothsome-comfort.surge.sh
         env:
