@@ -44,6 +44,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test With Python
         run: |
+          chmod 777 /home/runner/work/react-app/react-app/drivers/linux/chromedriver
           py.test -v -s githubactions/BrowserInteractions.py
       - name: Upload Test Coverage
         uses: actions/upload-artifact@v1
